@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+        <script src="java.js"></script>
+    
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+    </head >
+    <body >
+        <div class="topnav" id="myTopnav" >
+            <a href="#home" class="active" class="w3-bar-item w3-button">Home</a>
+            <a href="#news" class="w3-bar-item w3-button">Locations</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact us</a>
+            <a href="#about" class="w3-bar-item w3-button">About us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+            <div class="search">
+              <img class="img" src="/static/img/1.png" >
+              <span class="fix">{{username}}</span>   
+            </div>
+            <span> <a href="{{ url_for('logout') }}">logout</a></span>
+        </div>
+          <br>
+        
+
+
+
+          <h1 ><center>Hello! {{username}}</center></h1>
+
+          <div class="w3-container">
+          <div class="w3-content" style="max-width:1200px">
+            <div class="example">
+            <img class="mySlides" src="/static/img/and.jpg" style="width:100%;border-radius: 14px;display:none;height:80%;">
+            <div class="content2">
+              <div class="text">Chilika Lake
+                <div class="text2"><i>-: Lagoon in Odisha :-</i></div></div></div></div>
+                <div class="example">
+            <img class="mySlides" src="/static/img/taj.jpg" style="width:100%;border-radius: 14px;height:80%;">
+            <div class="content2">
+              <div class="text">Taj Mahal
+              <div class="text2"><i>-: The Place of Love :-</i></div></div></div></div>
+              <div class="example">
+            <img class="mySlides" src="/static/img/red.jpg" style="width:100%;border-radius: 14px;display:none;height:80%;">
+            <div class="content2">
+              <div class="text">Red Fort
+              <div class="text2"><i>-: Lal Qila :-</i></div></div></div></div>
+          
+            <div class="w3-row-padding w3-section">
+              <div class="w3-col s4" >
+                <img class="demo w3-opacity w3-hover-opacity-off" src="/static/img/and.jpg" style="width:100%;border-radius: 14px;height: 20%;cursor:pointer;box-shadow: 5px 1px 10px 2px rgb(255, 255, 255);" onclick="currentDiv(1)">
+              </div>
+              <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="/static/img/taj.jpg" style="width:100%;border-radius: 14px;height: 20%;cursor:pointer;box-shadow: 5px 1px 10px 2px rgb(255, 255, 255);" onclick="currentDiv(2)">
+              </div>
+              <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="/static/img/red.jpg" style="width:100%;border-radius: 14px;height: 20%;cursor:pointer ;box-shadow: 5px 1px 10px 2px rgb(255, 255, 255);" onclick="currentDiv(3)">
+              </div>
+            </div>
+          
+            <script>
+              function currentDiv(n) {
+                showDivs(slideIndex = n);
+              }
+              
+              function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                }
+                x[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " w3-opacity-off";
+              }
+              </script> 
+
+
+
+
+          
+        
+                <div>
+              <h1 style="color: rgb(0, 0, 0);">𝑷𝒐𝒑𝒖𝒍𝒂𝒓 𝑩𝒆𝒂𝒄𝒉𝒆𝒔</h1> (𝟒 𝐝𝐚𝐲𝐬 & 𝟑 𝐧𝐢𝐠𝐡𝐭𝐬 , 𝟐 𝐩𝐞𝐫𝐬𝐨𝐧 )
+            </div>
+            <br>
+          <div class="scroll">
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                
+            <img src="/static/img/2.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+            <div class="container">
+              <h4><b>Chandipur Beach </b></h4> 
+              <h6>(Odisha)</h6> 
+              <h4>₹21,000</h4> 
+              </div></div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="/static/img/c1.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+            <div class="container">
+              <h4><b>Candolim Beach </b></h4> 
+              <h6>(Noarth Goa)</h6> 
+              <h4>₹30,000</h4> 
+              </div>
+            </div></div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="/static/img/3.jpeg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+            <div class="container">
+              <h4><b> Blue Flag Golden Beach</b></h4> 
+              <h6>(Odisha)</h6>
+              <h4>₹26,000</h4> 
+              </div>
+            </div></div>
+
+
+            <div class="column">
+              <div class="card">
+                <img src="/static/img/go.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+            <div class="container">
+              <h4><b> Om Beach</b></h4> 
+              <h6>(Gokarna,Karnataka)</h6>
+              <h4>₹16,000</h4> 
+              </div>
+            </div></div>
+         
+        </div>
+        </div>
+        <br><br><br><br><br>
+  
+
+
+
+        <div>
+          <h1 style="color: rgb(0, 0, 0);">𝑷𝒐𝒑𝒖𝒍𝒂𝒓 𝑴𝒐𝒏𝒖𝒎𝒆𝒏𝒕𝒔 𝒊𝒏 𝑰𝒏𝒅𝒊𝒂</h1> (𝟒 𝐝𝐚𝐲𝐬 & 𝟑 𝐧𝐢𝐠𝐡𝐭𝐬 , 𝟐 𝐩𝐞𝐫𝐬𝐨𝐧 )
+        </div>
+        <br>
+      <div class="scroll">
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            
+        <img src="/static/img/t1.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+        <div class="container">
+          <h4><b>Taj Mahal, Agra </b></h4>
+          <h4>₹15,000</h4> 
+          </div></div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/static/img/af.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+        <div class="container">
+          <h4><b>Agra Fort, Agra </b></h4> 
+          <h4>₹15,000</h4> 
+          </div>
+        </div></div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="/static/img/qb.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+        <div class="container">
+          <h4><b>  Qutub Minar, Delhi</b></h4> 
+          <h4>₹20,000</h4> 
+          </div>
+        </div></div>
+
+
+        <div class="column">
+          <div class="card">
+            <img src="/static/img/rf.jpg" alt="Avatar" style="width:100%;height:50%; padding-left:5%">
+        <div class="container">
+          <h4><b> Red Fort, Delhi</b></h4> 
+          <h4>₹22,000</h4> 
+          </div>
+        </div></div>
+     
+    </div>
+    </div>
+    <br><br><br><br><br>
+    </body>
+</html>
